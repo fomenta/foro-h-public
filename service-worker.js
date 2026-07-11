@@ -1,4 +1,4 @@
-const CACHE_NAME = 'foro-himnario-df8b345d12ec';
+const CACHE_NAME = 'foro-himnario-48aaba97332c';
 const APP_SHELL = [
   '/',
   '/manifest.webmanifest',
