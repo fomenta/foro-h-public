@@ -2,7 +2,7 @@
   "name": "Foro Himnario",
   "short_name": "Himnario",
   "description": "Himnos y coros",
-  "start_url": "/",
+  "start_url": "/foro-h-public/",
   "display": "standalone",
   "background_color": "#0f766e",
   "theme_color": "#0f766e",

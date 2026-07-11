@@ -1,9 +1,10 @@
-const CACHE_NAME = 'foro-himnario-0138fa0dd4c8';
+const CACHE_NAME = 'foro-himnario-634deb75a509';
+const BASE_PATH = '/foro-h-public/';
 const APP_SHELL = [
-  '/',
-  '/manifest.webmanifest',
-  '/search/search_index.json',
-  '/assets/icon.svg'
+  BASE_PATH,
+  `${BASE_PATH}manifest.webmanifest`,
+  `${BASE_PATH}search/search_index.json`,
+  `${BASE_PATH}assets/icon.svg`
 ];
 
 self.addEventListener('install', (event) => {
@@ -23,18 +24,21 @@ self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   const req = event.request;
   const url = new URL(req.url);
+  if (url.origin !== self.location.origin) return;
+  if (!url.pathname.startsWith(BASE_PATH)) return;
 
   if (req.mode === 'navigate' || url.pathname.endsWith('.html')) {
     event.respondWith((async () => {
       try {
-        const fresh = await fetch(req);
+        // Force fresh HTML when online to avoid stale project-page caches.
+        const fresh = await fetch(req, { cache: 'no-store' });
         const cache = await caches.open(CACHE_NAME);
         cache.put(req, fresh.clone());
         return fresh;
       } catch (err) {
         const cached = await caches.match(req);
         if (cached) return cached;
-        const home = await caches.match('/');
+        const home = await caches.match(BASE_PATH);
         return home || new Response('Sin conexion', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
       }
     })());
