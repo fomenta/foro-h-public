@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700;800&display=swap");
+
+body.song-page .md-typeset {
+  font-family: "Atkinson Hyperlegible", "Noto Sans", "Segoe UI", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000;
+}
+
+body.song-page .md-main__inner {
+  margin-top: 0;
+}
+
+body.song-page .md-content__inner {
+  padding-top: 0;
+  padding-right: 0;
+}
+
+body.song-page .md-content__inner,
+body.song-page .md-typeset,
+body.song-page .md-typeset p {
+  max-width: none;
+}
+
+body.song-page .md-typeset h1 {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  font-size: 20px;
+  line-height: 22px;
+  color: #000;
+  font-weight: 800;
+}
+
+body.song-page .md-typeset h1 a {
+  color: #000;
+}
+
+body.song-page .md-content__inner > h1:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+body.song-page .md-typeset p {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  line-height: 28px;
+}
+
+body.song-page .md-typeset p.stanza-title {
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #000;
+}
+
+body.song-page .md-typeset h1 + p.stanza-title {
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 700px) {
+  body.song-page .md-typeset {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  body.song-page .md-typeset h1 {
+    margin-top: 0;
+    margin-bottom: 0.15rem;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  body.song-page .md-typeset p {
+    margin-top: 0.16rem;
+    margin-bottom: 0.16rem;
+  }
+
+  body.song-page .md-typeset p.stanza-title {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
