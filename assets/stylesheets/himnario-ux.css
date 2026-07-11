@@ -83,3 +83,24 @@ body.song-page .md-typeset h1 + p.stanza-title {
     line-height: 22px;
   }
 }
+
+/* Footer */
+.md-footer,
+.md-footer__inner,
+.md-footer-meta,
+.md-footer-meta__inner,
+.md-copyright {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.md-footer a,
+.md-footer-meta a,
+.md-copyright a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.md-footer a:hover,
+.md-footer-meta a:hover,
+.md-copyright a:hover {
+  color: #fff;
+}
