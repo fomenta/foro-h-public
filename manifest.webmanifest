@@ -1,0 +1,18 @@
+{
+  "name": "Foro Himnario",
+  "short_name": "Himnario",
+  "description": "Himnos y coros",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f766e",
+  "theme_color": "#0f766e",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
