@@ -4,8 +4,8 @@
   "description": "Himnos y coros",
   "start_url": "/foro-h-public/",
   "display": "standalone",
-  "background_color": "#0f766e",
-  "theme_color": "#0f766e",
+  "background_color": "#1f2e85",
+  "theme_color": "#1f2e85",
   "lang": "es",
   "icons": [
     {

@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700;800&display=swap");
 
+:root {
+  --md-primary-fg-color: #1f2e85;
+  --md-primary-fg-color--light: #3d4fa8;
+  --md-primary-fg-color--dark: #152063;
+}
+
+.md-header,
+.md-tabs {
+  background-color: #1f2e85;
+}
+
 body.song-page .md-typeset {
   font-family: "Atkinson Hyperlegible", "Noto Sans", "Segoe UI", sans-serif;
   font-size: 24px;
@@ -165,7 +176,7 @@ body.song-stanza-mode .md-content__inner > h1:first-child {
   height: 48px;
   border-radius: 50%;
   border: none;
-  background: rgba(15, 118, 110, 0.8);
+  background: rgba(31, 46, 133, 0.8);
   color: #fff;
   font-size: 24px;
   z-index: 100;
@@ -178,7 +189,7 @@ body.song-stanza-mode .md-content__inner > h1:first-child {
 }
 
 .stanza-btn:active {
-  background: rgba(15, 118, 110, 1);
+  background: rgba(31, 46, 133, 1);
 }
 
 .stanza-btn--prev { left: 1rem; }
@@ -196,7 +207,7 @@ body.song-stanza-mode .md-content__inner > h1:first-child {
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  background: rgba(15, 118, 110, 0.75);
+  background: rgba(31, 46, 133, 0.75);
   color: #fff;
   font-size: 22px;
   display: flex;
@@ -209,7 +220,7 @@ body.song-stanza-mode .md-content__inner > h1:first-child {
 }
 
 .stanza-menu-btn:active {
-  background: rgba(15, 118, 110, 1);
+  background: rgba(31, 46, 133, 1);
 }
 
 .stanza-nav {
