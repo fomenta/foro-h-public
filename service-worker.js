@@ -1,4 +1,4 @@
-const CACHE_NAME = 'foro-himnario-c4e51e835a09';
+const CACHE_NAME = 'foro-himnario-f8b1345488c4';
 const BASE_PATH = '/foro-h-public/';
 const APP_SHELL = [
   BASE_PATH,
