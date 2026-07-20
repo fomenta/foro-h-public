@@ -104,7 +104,7 @@
   padding-left: 0;
 }
 
-body.song-page .md-typeset {
+body.song-page .md-content__inner .md-typeset {
   font-family: "Atkinson Hyperlegible", "Noto Sans", "Segoe UI", sans-serif;
   font-size: 24px;
   line-height: 30px;
@@ -121,12 +121,12 @@ body.song-page .md-content__inner {
 }
 
 body.song-page .md-content__inner,
-body.song-page .md-typeset,
-body.song-page .md-typeset p {
+body.song-page .md-content__inner .md-typeset,
+body.song-page .md-content__inner .md-typeset p {
   max-width: none;
 }
 
-body.song-page .md-typeset h1 {
+body.song-page .md-content__inner .md-typeset h1 {
   margin-top: 0;
   margin-bottom: 0.2rem;
   font-size: 20px;
@@ -135,7 +135,7 @@ body.song-page .md-typeset h1 {
   font-weight: 800;
 }
 
-body.song-page .md-typeset h1 a {
+body.song-page .md-content__inner .md-typeset h1 a {
   color: #000;
 }
 
@@ -144,13 +144,13 @@ body.song-page .md-content__inner > h1:first-child {
   padding-top: 0;
 }
 
-body.song-page .md-typeset p {
+body.song-page .md-content__inner .md-typeset p {
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
   line-height: 28px;
 }
 
-body.song-page .md-typeset p.stanza-title {
+body.song-page .md-content__inner .md-typeset p.stanza-title {
   margin-top: 1rem;
   margin-bottom: 0.35rem;
   font-size: 20px;
@@ -160,29 +160,29 @@ body.song-page .md-typeset p.stanza-title {
   color: #000;
 }
 
-body.song-page .md-typeset h1 + p.stanza-title {
+body.song-page .md-content__inner .md-typeset h1 + p.stanza-title {
   margin-top: 0.35rem;
 }
 
 @media (max-width: 700px) {
-  body.song-page .md-typeset {
+  body.song-page .md-content__inner .md-typeset {
     font-size: 24px;
     line-height: 30px;
   }
 
-  body.song-page .md-typeset h1 {
+  body.song-page .md-content__inner .md-typeset h1 {
     margin-top: 0;
     margin-bottom: 0.15rem;
     font-size: 20px;
     line-height: 22px;
   }
 
-  body.song-page .md-typeset p {
+  body.song-page .md-content__inner .md-typeset p {
     margin-top: 0.16rem;
     margin-bottom: 0.16rem;
   }
 
-  body.song-page .md-typeset p.stanza-title {
+  body.song-page .md-content__inner .md-typeset p.stanza-title {
     font-size: 20px;
     line-height: 22px;
   }
@@ -359,6 +359,8 @@ body.song-stanza-mode .md-content__inner > h1:first-child {
   box-sizing: border-box;
   color: #000;
   font-family: "Atkinson Hyperlegible", "Noto Sans", "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .stanza-card.active {
@@ -426,4 +428,13 @@ body.stanza-drawer-open .stanza-nav {
 
 body.stanza-drawer-open .stanza-topbar {
   z-index: 1 !important;
+}
+
+.stanza-card::-webkit-scrollbar {
+  width: 4px;
+}
+
+.stanza-card::-webkit-scrollbar-thumb {
+  background: rgba(31, 46, 133, 0.3);
+  border-radius: 2px;
 }
