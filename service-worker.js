@@ -1,4 +1,4 @@
-const CACHE_NAME = 'foro-himnario-936e0592943f';
+const CACHE_NAME = 'foro-himnario-3092406edf65';
 const BASE_PATH = '/foro-h-public/';
 const APP_SHELL = [
   BASE_PATH,
@@ -8,8 +8,13 @@ const APP_SHELL = [
 ];
 
 self.addEventListener('install', (event) => {
-  self.skipWaiting();
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
+});
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
 
 self.addEventListener('activate', (event) => {
