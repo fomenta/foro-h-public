@@ -11,6 +11,99 @@
   background-color: #1f2e85;
 }
 
+/* ── Nav tabs (Himnos / Coros) ── */
+
+.nav-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest, rgba(0,0,0,0.07));
+  margin: 0 0.6rem;
+}
+
+.nav-tab {
+  flex: 1;
+  padding: 0.5rem 0;
+  border: none;
+  background: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--md-default-fg-color--light, rgba(0,0,0,0.54));
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-tab:hover {
+  color: var(--md-default-fg-color, rgba(0,0,0,0.87));
+}
+
+.nav-tab--active {
+  color: var(--md-primary-fg-color, #1f2e85);
+  border-bottom-color: var(--md-primary-fg-color, #1f2e85);
+}
+
+/* ── Himnos grid 5-por-linea ── */
+
+.nav-section--himnos {
+  padding: 0.5rem 0.6rem;
+}
+
+.himnos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+}
+
+.himno-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.1rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--md-default-fg-color, rgba(0,0,0,0.87));
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.himno-number:hover {
+  background: var(--md-default-fg-color--lightest, rgba(0,0,0,0.07));
+}
+
+.himno-number--active {
+  background: var(--md-primary-fg-color, #1f2e85);
+  color: #fff;
+  font-weight: 800;
+}
+
+.himno-number--active:hover {
+  background: var(--md-primary-fg-color--dark, #152063);
+  color: #fff;
+}
+
+/* ── Nav sections (coros, inicio) ── */
+
+.nav-section--coros {
+  padding: 0;
+}
+
+.nav-section--coros .md-nav__list {
+  padding-left: 0;
+}
+
+.nav-section--inicio {
+  margin-top: 0.25rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest, rgba(0,0,0,0.07));
+  padding: 0;
+}
+
+.nav-section--inicio .md-nav__list {
+  padding-left: 0;
+}
+
 body.song-page .md-typeset {
   font-family: "Atkinson Hyperlegible", "Noto Sans", "Segoe UI", sans-serif;
   font-size: 24px;
@@ -106,9 +199,38 @@ body.song-page .md-typeset h1 + p.stanza-title {
 
 body.song-stanza-mode .md-header,
 body.song-stanza-mode .md-tabs,
-body.song-stanza-mode .md-search,
 body.song-stanza-mode .md-sidebar--secondary {
   display: none !important;
+}
+
+body.song-stanza-mode .md-search {
+  position: fixed;
+  top: 40px;
+  right: 0;
+  z-index: 89;
+  background: none;
+  box-shadow: none;
+}
+
+body.song-stanza-mode .md-search__form {
+  background-color: rgba(31, 46, 133, 0.95);
+  border-radius: 0 0 4px 4px;
+}
+
+body.song-stanza-mode .md-search__input {
+  color: #fff;
+}
+
+body.song-stanza-mode .md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+body.song-stanza-mode .md-search__icon[for="__search"] {
+  color: #fff;
+}
+
+body.song-stanza-mode .md-search__overlay {
+  top: 40px;
 }
 
 body.song-stanza-mode .md-main {
@@ -170,6 +292,24 @@ body.song-stanza-mode .md-content__inner > h1:first-child {
 }
 
 .stanza-topbar__menu:active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stanza-topbar__search {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  flex-shrink: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.stanza-topbar__search:active {
   background: rgba(255, 255, 255, 0.15);
 }
 
