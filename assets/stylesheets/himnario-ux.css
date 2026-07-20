@@ -128,8 +128,8 @@ body.song-stanza-mode .md-content {
 body.song-stanza-mode .md-content__inner {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 40px 0 0 0;
+  justify-content: flex-start;
+  padding: 48px 0 0 0;
   height: 100%;
   overflow: hidden;
 }
