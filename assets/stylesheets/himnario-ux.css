@@ -192,7 +192,8 @@ body.song-page .md-typeset h1 + p.stanza-title {
 .md-nav__version {
   font-size: 11px;
   color: var(--md-default-fg-color--lighter, rgba(0, 0, 0, 0.32));
-  padding: 0.5rem 1.2rem 0.75rem;
+  padding: 0.75rem 1.2rem;
+  margin-top: auto;
 }
 
 /* ── Stanza mode (PWA standalone) ── */
@@ -325,6 +326,10 @@ body.song-stanza-mode .md-content__inner > h1:first-child {
   background: rgba(255, 255, 255, 0.15);
 }
 
+.stanza-topbar__search svg {
+  fill: #fff;
+}
+
 .stanza-topbar__title {
   flex: 1;
   text-align: center;
@@ -338,10 +343,11 @@ body.song-stanza-mode .md-content__inner > h1:first-child {
 }
 
 .stanza-topbar__indicator {
-  font-size: 12px;
-  opacity: 0.85;
+  font-family: "Atkinson Hyperlegible", "Noto Sans", "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
   flex-shrink: 0;
-  min-width: 52px;
+  min-width: 62px;
   text-align: right;
 }
 
