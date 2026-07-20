@@ -199,43 +199,7 @@ body.song-page .md-content__inner .md-typeset h1 + p.stanza-title {
 /* ── Stanza mode (PWA standalone) ── */
 
 body.song-stanza-mode .md-header {
-  background: transparent !important;
-  box-shadow: none !important;
-  pointer-events: none;
-}
-
-body.song-stanza-mode .md-header__inner {
-  visibility: hidden;
-}
-
-body.song-stanza-mode .md-header__inner .md-search {
-  visibility: visible;
-  position: fixed;
-  top: 40px;
-  right: 0;
-  z-index: 89;
-  pointer-events: auto;
-}
-
-body.song-stanza-mode .md-search__form {
-  background-color: rgba(31, 46, 133, 0.95);
-  border-radius: 0 0 4px 4px;
-}
-
-body.song-stanza-mode .md-search__input {
-  color: #fff;
-}
-
-body.song-stanza-mode .md-search__input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-body.song-stanza-mode .md-search__icon[for="__search"] {
-  color: #fff;
-}
-
-body.song-stanza-mode .md-search__overlay {
-  top: 40px;
+  display: none !important;
 }
 
 body.song-stanza-mode .md-tabs,
@@ -372,7 +336,7 @@ body.song-stanza-mode .md-content__inner > h1:first-child {
 }
 
 .stanza-card p {
-  margin: 0.12em 0;
+  margin: 0;
 }
 
 .stanza-btn {
